@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>Title</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive-md">
+            <table
+              class="table table-striped table-hover table-bordered table-dark align-middle"
+            >
+              <thead class="table-dark">
+                <!-- <caption>Table Name</caption> -->
+                <tr class="text-capitalize text-center">
+                  <th>id</th>
+                  <th>name</th>
+                  <th>description</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider"></tbody>
+              <!-- <tfoot></tfoot> -->
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const courses = [
+        {
+          id: 1,
+          name: "HTML",
+          description:
+            "HTML is a markup language for creating the structure of a webpage.",
+        },
+        {
+          id: 2,
+          name: "CSS",
+          description:
+            "CSS is a styling language used to control the presentation of a webpage.",
+        },
+        {
+          id: 3,
+          name: "JavaScript",
+          description:
+            "JavaScript is a programming language used for creating interactive functionality on webpages.",
+        },
+        {
+          id: 4,
+          name: "Python",
+          description:
+            "Python is a high-level programming language used for general-purpose programming.",
+        },
+        {
+          id: 5,
+          name: "Java",
+          description:
+            "Java is a popular programming language used for developing desktop, mobile, and web applications.",
+        },
+        {
+          id: 6,
+          name: "Ruby",
+          description:
+            "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity.",
+        },
+        {
+          id: 7,
+          name: "PHP",
+          description:
+            "PHP is a server-side scripting language used for creating dynamic web pages and web applications.",
+        },
+        {
+          id: 8,
+          name: "Swift",
+          description:
+            "Swift is a powerful and intuitive programming language developed by Apple for building iOS, macOS, watchOS, and tvOS apps.",
+        },
+        {
+          id: 9,
+          name: "C#",
+          description:
+            "C# is a modern, object-oriented programming language designed by Microsoft for building Windows applications.",
+        },
+        {
+          id: 10,
+          name: "Go",
+          description:
+            "Go is an open source programming language created by Google, known for its efficiency, simplicity, and speed.",
+        },
+        {
+          id: 11,
+          name: "Kotlin",
+          description:
+            "Kotlin is a statically typed programming language used for developing Android apps and server-side applications.",
+        },
+        {
+          id: 12,
+          name: "Scala",
+          description:
+            "Scala is a modern, multi-paradigm programming language designed for scalable, distributed systems.",
+        },
+      ];
+      const renderData = (data) => {
+        const tbody = document.querySelector("tbody");
+        data.forEach((item) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${item.id}</td>
+            <td>${item.name}</td>
+            <td>${item.description}</td>
+            `;
+          tbody.appendChild(tr);
+        });
+      };
+      renderData(courses);
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
