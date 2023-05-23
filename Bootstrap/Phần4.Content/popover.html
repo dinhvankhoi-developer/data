@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
+  </head>
+  <body>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="popover"
+      data-bs-placement="top"
+      title="Popover title"
+      data-bs-content="And here's some amazing content. It's very engaging. Right?"
+    >
+      Click to toggle popover
+    </button>
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-bs-toggle="popover"
+      title="Popup title"
+      data-bs-content="Popup content"
+    >
+      Trigger
+    </button>
+    pop
+
+    <!-- Call this script after bootstrap.bundle.min.js CDN -->
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
