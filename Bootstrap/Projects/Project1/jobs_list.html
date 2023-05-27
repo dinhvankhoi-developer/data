@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
+    <style>
+      .custom {
+        background: #121fcf;
+        background: -webkit-radial-gradient(
+          ellipse farthest-corner at center center,
+          #121fcf 30%,
+          #00ff00 50%,
+          #87ffc3 50%,
+          #cf1512 41%
+        );
+        background: -moz-radial-gradient(
+          ellipse farthest-corner at center center,
+          #121fcf 30%,
+          #00ff00 50%,
+          #87ffc3 50%,
+          #cf1512 41%
+        );
+        background: radial-gradient(
+          ellipse farthest-corner at center center,
+          #121fcf 30%,
+          #00ff00 50%,
+          #87ffc3 50%,
+          #cf1512 41%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ! navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand text-uppercase custom p-2 rounded-2"
+          href="./index.html"
+          >ems2.0</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./dash.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./employees_list.html">Employees</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./jobs_list.html">Jobs</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              required
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <div class="vr text-light mx-2"></div>
+            <button class="btn btn-outline-success" type="submit">
+              <span class="mx-1 fw-bold">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div class="vr mx-2 text-light"></div>
+            <button type="button" class="btn btn-outline-danger">
+              <span class=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-power"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M7.5 1v7h1V1h-1z" />
+                  <path
+                    d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"
+                  /></svg
+              ></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- !navbar -->
+
+    <!-- !employees data -->
+    <div class="container-fluid">
+      <div class="row my-3">
+        <div class="col-md-3">
+          <div class="list-group text-center text-capitalize">
+            <a
+              href="#"
+              class="list-group-item list-group-item-action active"
+              aria-current="true"
+              data-bs-toggle="tab"
+            >
+              jobs data
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              data-bs-toggle="tab"
+              >add jobs</a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              data-bs-toggle="modal"
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#details"
+              >view jobs</a
+            >
+          </div>
+          <div class="row my-4">
+            <div class="col-md-12">
+              <div class="list-group text-center text-capitalize">
+                <a
+                  href="./employees_list.html"
+                  class="list-group-item list-group-item-action active"
+                  aria-current="true"
+                  data-bs-toggle="tab"
+                >
+                  Related links
+                </a>
+                <a
+                  href="./employees_list.html"
+                  class="list-group-item list-group-item-action"
+                  data-bs-toggle="tab"
+                  >jobs employees</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="card border-secondary mb-3">
+            <div class="card-header text-capitalize fw-bold">
+              employees list
+            </div>
+            <div class="card-body text-light">
+              <div class="table-responsive">
+                <table
+                  class="table table-striped table-hover table-bordered table-secondary align-middle"
+                >
+                  <thead class="table-light">
+                    <!-- <caption>Table Name</caption> -->
+                    <tr class="text-capitalize">
+                      <th>id</th>
+                      <th>jobs id</th>
+                      <th>email id</th>
+                      <th>details</th>
+                      <th>edit</th>
+                      <th>delete</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-group-divider">
+                    <tr class="table-primary">
+                      <td scope="row">1</td>
+                      <td>0AF1</td>
+                      <td>abc@gmail.com</td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-primary mx-auto d-block text-capitalize"
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#details"
+                        >
+                          details
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-warning mx-auto d-block text-capitalize"
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#edit"
+                        >
+                          edit
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-danger mx-auto d-block text-capitalize"
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete"
+                        >
+                          delete
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="table-primary">
+                      <td scope="row">1</td>
+                      <td>0AF1</td>
+                      <td>abc@gmail.com</td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-primary mx-auto d-block text-capitalize"
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#details"
+                        >
+                          details
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-warning mx-auto d-block text-capitalize"
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#edit"
+                        >
+                          edit
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-danger mx-auto d-block text-capitalize"
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete"
+                        >
+                          delete
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="table-primary">
+                      <td scope="row">1</td>
+                      <td>0AF1</td>
+                      <td>abc@gmail.com</td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-primary mx-auto d-block text-capitalize"
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#details"
+                        >
+                          details
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-warning mx-auto d-block text-capitalize"
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#edit"
+                        >
+                          edit
+                        </button>
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          class="btn btn-danger mx-auto d-block text-capitalize"
+                          type="button"
+                          class="btn btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#delete"
+                        >
+                          delete
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot></tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !employees data -->
+
+    <!-- ! add jobs  -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Thêm thành viên vào danh sách
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post" class="was-validated">
+              <div class="mb-3">
+                <label for="email" class="form-label">ID</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  id="exampleInputText1"
+                  aria-describedby="textHelp"
+                  placeholder="Enter ID"
+                />
+                <div id="textHelp" class="form-text invalid-feedback">
+                  We'll never share your texts with anyone else.
+                </div>
+                <div class="valid-feedback">ok</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputText1" class="form-label"
+                  >Employees ID</label
+                >
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  id="exampleInputText1"
+                  aria-describedby="textHelp"
+                  placeholder="Enter Text"
+                />
+                <div id="textHelp" class="form-text invalid-feedback">
+                  We'll never share your texts with anyone else.
+                </div>
+                <div class="valid-feedback">ok</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputText1" class="form-label">Email</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter Email "
+                  aria-describedby="textHelp"
+                />
+                <div id="textHelp" class="form-text invalid-feedback">
+                  We'll never share your texts with anyone else.
+                </div>
+                <div class="valid-feedback">ok</div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Huỷ
+            </button>
+            <button type="button" class="btn btn-primary">Lưu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! add jobs  -->
+
+    <!-- !details -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="details"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Thông tin thành viên
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive-sm">
+              <table
+                class="table table-striped table-hover table-bordered table-primary align-middle"
+              >
+                <tbody>
+                  <tr>
+                    <th>id</th>
+                    <td>0AF1</td>
+                  </tr>
+                  <tr>
+                    <th>employees id</th>
+                    <td>0AF1</td>
+                  </tr>
+                  <tr>
+                    <th>email</th>
+                    <td>avc@gmailc.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !details -->
+
+    <!-- ! edit employees -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="edit"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Chỉnh sửa thông tin thành viên
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="post" class="was-validated">
+              <div class="mb-3">
+                <label for="email" class="form-label">ID</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  id="exampleInputText1"
+                  aria-describedby="textHelp"
+                  value="0AF1"
+                />
+                <div id="textHelp" class="form-text invalid-feedback">
+                  We'll never share your texts with anyone else.
+                </div>
+                <div class="valid-feedback">ok</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputText1" class="form-label"
+                  >Employees ID</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputText1"
+                  aria-describedby="textHelp"
+                  value="0AF1"
+                  required
+                />
+                <div id="textHelp" class="form-text invalid-feedback">
+                  We'll never share your texts with anyone else.
+                </div>
+                <div class="valid-feedback">ok</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputText1" class="form-label">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  value="avc@gmailc.com"
+                  aria-describedby="textHelp"
+                  required
+                />
+                <div id="textHelp" class="form-text invalid-feedback">
+                  We'll never share your texts with anyone else.
+                </div>
+                <div class="valid-feedback">ok</div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! edit employees -->
+
+    <!-- ! delete employees -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="delete"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Xoá thành viên</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h3 class="text-capitalize">Cảnh báo quan trọng</h3>
+            <p>
+              Bạn muốn xoá thành viên
+              <span class="text-danger">
+                <u><b>Andrew </b></u></span
+              >
+              ra khỏi danh sách không ?
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Huỷ thao tác
+            </button>
+            <button type="button" class="btn btn-danger">Xoá</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! delete employees -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
