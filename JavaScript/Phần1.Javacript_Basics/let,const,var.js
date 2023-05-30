@@ -3,11 +3,11 @@ console.log(number);
 var number = `hello world`;
 console.log(number);
 
-let name = `Khôi`;
-console.log(name);
+let names = `Khôi`;
+console.log(names);
 
-name = 45;
-console.log(name);
+names = 45;
+console.log(names);
 
 const year = 2024;
 console.log(year);
