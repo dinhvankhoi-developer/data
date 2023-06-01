@@ -29,3 +29,28 @@ if (num3.length > 10 && num3.length < 18) {
   console.log(num3);
 }
 console.log(num3, typeof num3);
+
+const num4 = [
+  1,
+  2,
+  3,
+  4,
+  [
+    4,
+    3,
+    2,
+    4,
+    5,
+    [
+      7,
+      6,
+      7,
+      5,
+      4,
+      [12, 32, 43, 24, [76, 9, 8, 4, 2, [3, 5, 6, 4, 3, [55, 100]]]],
+    ],
+  ],
+];
+const flat = num4.flat(Infinity);
+const setData = new Set(flat);
+console.log(flat.length, setData.size);
