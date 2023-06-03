@@ -67,3 +67,4 @@ switch (month) {
     console.log("Không phải tháng trong năm.");
     break;
 }
+// .
