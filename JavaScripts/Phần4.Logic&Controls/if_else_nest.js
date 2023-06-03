@@ -51,3 +51,4 @@ if (hour < 11) {
     console.log(`tôi đang ngủ`);
   }
 }
+// .
