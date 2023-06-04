@@ -91,8 +91,8 @@ const cars = [
 ];
 
 const data = cars.filter((car) => {
-  if (car.price < 100000) {
-    console.log(car.name);
+  if (car.price > 300000) {
+    return car.name;
   }
 });
 
