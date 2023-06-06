@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>Title</title>
+    <style>
+      li {
+        transition: all 0.5s ease-in-out;
+      }
+      li:hover {
+        color: red;
+        background: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-7">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Honda</li>
+            <li class="list-group-item">Yamaha</li>
+            <li class="list-group-item">Suzuki</li>
+            <li class="list-group-item">Kawasaki</li>
+            <li class="list-group-item">Harley-Davidson</li>
+            <li class="list-group-item">BMW</li>
+            <li class="list-group-item">Ducati</li>
+            <li class="list-group-item">Triumph</li>
+            <li class="list-group-item">KTM</li>
+            <li class="list-group-item">Aprilia</li>
+            <li class="list-group-item">MV Agusta</li>
+            <li class="list-group-item">Royal Enfield</li>
+            <li class="list-group-item">Indian</li>
+            <li class="list-group-item">Zero Motorcycles</li>
+            <li class="list-group-item">Piaggio</li>
+            <li class="list-group-item">Vespa</li>
+            <li class="list-group-item">Can-Am Spyder</li>
+            <li class="list-group-item">Husqvarna</li>
+            <li class="list-group-item">Bajaj Pulsar</li>
+            <li class="list-group-item">Hero Splendor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const li = document.querySelectorAll("li");
+      li.forEach((list) => {
+        console.log(`tên mẫu xe :${list.textContent}`);
+        list.addEventListener("click", function () {
+          list.remove();
+          //   nếu list  = 0 , thì hiển thị alert = `dữ liệu trống
+        });
+      });
+    </script>
+  </body>
+</html>
