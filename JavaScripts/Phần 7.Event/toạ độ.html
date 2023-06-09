@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>xem tạo độ</h1>
+    <p class="test">Toạ độ :</p>
+    <script>
+      const renderData = () => {
+        const p = document.querySelector(".test");
+        document.documentElement.addEventListener("mousemove", (e) => {
+          let x = e.clientX;
+          let y = e.clientY;
+          p.innerText = `Toạ độ là : X: ${x}, Y: ${y}`;
+          if (x > 300 && y > 200) {
+            p.style.color = "red";
+            const show = setTimeout(() => {
+              alert(`đội dung ${p.innerText}`);
+            }, 0);
+            setTimeout(() => {
+              p.click();
+            }, 4000);
+          } else {
+            p.style.color = "blue";
+            clearTimeout(show);
+          }
+        });
+      };
+      renderData();
+    </script>
+  </body>
+</html>
